@@ -15,6 +15,10 @@ public class ExersiceHome5 {
                 break;
             }
         }
+        if(arr[i] == arr[i+1])
+        {
+            top = -1;
+        }
         for (int j = i; j < arr.length; j++)
         {
             if (j+1 < arr.length)
@@ -40,7 +44,7 @@ public class ExersiceHome5 {
 
         }
         public static void main (String[]args){
-            int[] array = {0,4,3,2,1};
+            int[] array = {0,1,7,9,9,2};
             int ans = upAndDown(array);
             System.out.println(ans);
         }
