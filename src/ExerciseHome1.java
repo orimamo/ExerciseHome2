@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Exercise1 {
+public class ExerciseHome1 {
     public static boolean isExists(String sentence, String word)
     {
         boolean check = false;

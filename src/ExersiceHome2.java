@@ -21,7 +21,7 @@ public class ExersiceHome2 {
         double everage = (sum / ARRAY_SIZE);
         for (int i = 0; i < ARRAY_SIZE; i++) {
             if (tenNumbers[i] > everage) {
-                System.out.println(tenNumbers[i]);
+                System.out.print(tenNumbers[i] +",");
             }
         }
     }

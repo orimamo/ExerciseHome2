@@ -24,10 +24,13 @@ public class ExersiceHome6 {
     {
 
         int end = arr.length;
-        for (int i = 0; i < end; i++) {
-            for (int j = i + 1; j < end; j++) {
+        int shiftLeft=0;
+        for (int i = 0; i < end; i++)
+        {
+            for (int j = i + 1; j < end; j++)
+            {
                 if (arr[i] == arr[j]) {
-                    int shiftLeft = j;
+                    shiftLeft = j;
                     for (int k = j+1; k < end; k++, shiftLeft++) {
                         arr[shiftLeft] = arr[k];
                     }
@@ -37,16 +40,27 @@ public class ExersiceHome6 {
             }
         }
 
-        int[] whitelist = new int[end];
-        for(int i = 0; i < end; i++){
+        int[] whitelist = new int[shiftLeft-1];
+        for(int i = 0; i < shiftLeft-1; i++){
             whitelist[i] = arr[i];
         }
         return whitelist;
     }
+    public static boolean stranger(int[] arr1, int[] arr2){
+        boolean check = false;
+        int[] arr3 = intersection(arr1, arr2);
+        if (arr3.length==0){
+            check=true;
+        }
+
+        return check;
+
+    }
 
     public static void main(String[] args) {
-        int[] arr1 = {10, 50, 40, 60, 79, 60, 53};
-        int[] arr2 = {10, 55, 11, 53, 79, 60, 53};
+        int[] arr1 = {10, 56, 40, 60, 79, 60, 54,62};
+        int[] arr2 = {10, 52, 12, 56, 78, 62, 54,27};
+        System.out.println(stranger(arr1,arr2));
        int[] arr3 = intersection(arr1, arr2);
        for (int i=0;i< arr3.length;i++){
            System.out.print(arr3[i] + ",");
